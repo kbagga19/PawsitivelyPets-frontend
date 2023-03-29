@@ -1,0 +1,61 @@
+/* universal */
+
+body {
+    margin: 0;
+    padding: 0;  
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none; 
+}
+
+.createpost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+}
+
+.writeBlogForm {
+    width: 60%;
+    margin-bottom: 10%;
+}
+
+.writeBlogForm input{
+    display: block;
+    margin-bottom: 2%;
+    width: 100%;
+    padding: 3px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 5vh;
+}
+.createpostbtn {
+    cursor: pointer;
+    width: 30%;
+    display: block;
+    background-color: #555;
+    border:0;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2%;
+    margin: auto;
+}
+
+.createpostheading{
+    padding-top: 2%;
+    text-align: center;
+    font-family: "Fredoka One",cursive;
+}
+
+.blogContent {
+    margin-bottom: 5%;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1497px) {
+    .writeBlogForm input {
+        padding: 9px;
+    }
+}

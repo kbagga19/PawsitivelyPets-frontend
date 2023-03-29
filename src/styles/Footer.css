@@ -1,0 +1,119 @@
+.footer{
+    height: auto;
+    background-color: #e5eeff; 
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.footer-topbar{
+    display: flex;
+    height: 15vh;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 2px solid lightgrey;
+}
+
+.social-icon {
+    width: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-logo>a>img{
+    height: 12vh;
+}
+
+.footer-topbar>img{
+    height: 8vh;
+    width: 8vh;
+}
+
+.footer-secondbar{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Readex Pro", Sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.footer-list {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-list ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 30vw;
+    align-items: center;
+}
+
+.main-footer{
+    text-align: center;
+    padding-top: 3%;
+}
+
+.main-footer>span{
+    font-family: "Fredoka One",cursive;
+    font-size: 3rem;
+}
+
+.main-footer-email{
+    width: 60%;
+    margin-top: 3%;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-footer-email>span{
+    font-size:1.2rem;
+    font-family: "Readex Pro", Sans-serif;
+}
+.main-footer-email>button{
+    border: none;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #ffd100;
+    font-family: "Readex Pro", Sans-serif;
+    font-weight: bold;
+}
+
+.main-footer>div>img{
+    width: 46vh;
+    /* margin-right: 70%; */
+}
+
+.footer-foot {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-family: "Readex Pro", Sans-serif;
+}
+
+.details span {
+    display: flex;
+}
+
+.termsprivacy ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 17vw;
+}
+
+.termsprivacy ul li {
+    cursor: pointer;
+}
+
+.termsprivacy ul li:hover {
+    color: gray;
+    transition: 0.5;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+}
