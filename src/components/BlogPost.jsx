@@ -7,7 +7,7 @@ const BlogPost = ({_id, title, summary, cover, content, createdAt, author}) => {
   return (
     <div>
         <div className="blog-card">
-        <img src={'http://localhost:3001/'+cover} className="blog-img" alt="blog1"/>
+        <img src={'http://pawsitivelypets-api.onrender.com/'+cover} className="blog-img" alt="blog1"/>
         <h1 className="blog-title">{title}</h1>
         <h3>{author.name}</h3>
         <time>{formatISO9075(new Date(createdAt))}</time>
