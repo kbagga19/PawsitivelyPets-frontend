@@ -41,7 +41,7 @@ export default function CreatePost() {
     data.set('file', files[0]);
     
     ev.preventDefault();
-    const response = await fetch('http://localhost:3001/post', {
+    const response = await fetch('https://pawsitivelypets-api.onrender.com/post', {
         method: 'POST',
         body: data,
         credentials: 'include',
@@ -52,7 +52,7 @@ export default function CreatePost() {
   }
 
   useEffect(() => {
-    fetch ('http://localhost:3001/profile',{
+    fetch ('https://pawsitivelypets-api.onrender.com/profile',{
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
