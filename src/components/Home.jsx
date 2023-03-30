@@ -42,7 +42,7 @@ const Home = () => {
     }, [])    
 
   useEffect(() => {
-    fetch('http://localhost:3001/homePost').then(response => {
+    fetch('https://pawsitivelypets-api.onrender.com/homePost').then(response => {
       response.json().then(posts => {
         setPosts(posts);
       });
@@ -51,7 +51,7 @@ const Home = () => {
 
     async function register(ev) {
         ev.preventDefault();
-        const response = await fetch('http://localhost:3001/register', {
+        const response = await fetch('https://pawsitivelypets-api.onrender.com/register', {
             method: 'POST',
             body: JSON.stringify({name, email, password}),
             headers: {'Content-Type':'application/json'}
@@ -65,7 +65,7 @@ const Home = () => {
 
     async function login(ev){
         ev.preventDefault();
-        const response = await fetch('http://localhost:3001/login', {
+        const response = await fetch('https://pawsitivelypets-api.onrender.com/login', {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {'Content-Type':'application/json'},
@@ -107,7 +107,7 @@ const Home = () => {
               $('body').css('overflow', "visible");
             });
           });
-          fetch('http://localhost:3001/profile',{
+          fetch('https://pawsitivelypets-api.onrender.com/profile',{
             credentials: 'include',
           }).then(response => {
             response.json().then(userInfo => {
@@ -117,7 +117,7 @@ const Home = () => {
     }, [])
 
     function logout() {
-        fetch('http://localhost:3001/logout', {
+        fetch('https://pawsitivelypets-api.onrender.com/logout', {
             credentials: 'include',
             method: 'POST'
         });
