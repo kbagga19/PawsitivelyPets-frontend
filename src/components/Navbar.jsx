@@ -16,7 +16,7 @@ const Navbar = () => {
   } = CartState();
   
   useEffect(() => {
-    fetch('http://localhost:3001/profile',{
+    fetch('https://pawsitivelypets-api.onrender.com/profile',{
         credentials: 'include',
         }).then(response => {
         response.json().then(userInfo => {
@@ -26,7 +26,7 @@ const Navbar = () => {
   },[]);
 
   function logout() {
-    fetch('http://localhost:3001/logout', {
+    fetch('https://pawsitivelypets-api.onrender.com/logout', {
         credentials: 'include',
         method: 'POST'
     });
