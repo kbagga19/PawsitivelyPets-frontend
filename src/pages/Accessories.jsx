@@ -6,7 +6,7 @@ const Accessories = () => {
 
   const [product, setproduct] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:3001/accessories',{
+    fetch('https://pawsitivelypets-api.onrender.com/accessories',{
         credentials: 'include',
         }).then(response => {
         response.json().then(productInfo => {
