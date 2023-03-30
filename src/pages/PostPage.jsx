@@ -8,7 +8,7 @@ const PostPage = () => {
     const [postInfo, setPostInfo] = useState(null);
     const {id} = useParams();
     useEffect(() => {
-        fetch(`http://localhost:3001/post/${id}`)
+        fetch(`https://pawsitivelypets-api.onrender.com/post/${id}`)
         .then(response => {
             response.json().then(postInfo => {
                 setPostInfo(postInfo);
@@ -23,7 +23,7 @@ const PostPage = () => {
     <Navbar/>
     <div>
     <div className="banner">
-        <img src={`http://localhost:3001/${postInfo.cover}`}/>
+        <img src={`https://pawsitivelypets-api.onrender.com/${postInfo.cover}`}/>
     </div>
     <div class="blog">
         <h1 class="postTitle">{postInfo.title}</h1>
