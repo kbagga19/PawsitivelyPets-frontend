@@ -13,7 +13,7 @@ const Items = ({prod}) => {
       console.log(cart);
 
       useEffect(() => {
-        fetch ('http://localhost:3001/profile',{
+        fetch ('https://pawsitivelypets-api.onrender.com/profile',{
             credentials: 'include',
           }).then(response => {
             response.json().then(userInfo => {
