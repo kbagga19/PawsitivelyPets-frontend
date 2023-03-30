@@ -6,7 +6,7 @@ import '../styles/shopProducts.css'
 const GroomingProducts = () => {
     const [product, setproduct] = useState([]);
     useEffect(() => {
-      fetch('http://localhost:3001/grooming',{
+      fetch('https://pawsitivelypets-api.onrender.com/grooming',{
           credentials: 'include',
           }).then(response => {
           response.json().then(productInfo => {
