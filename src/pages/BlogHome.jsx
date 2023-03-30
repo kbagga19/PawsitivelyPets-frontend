@@ -9,13 +9,13 @@ const BlogHome = () => {
   const [username, setUsername] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3001/post').then(response => {
+    fetch('https://pawsitivelypets-api.onrender.com/post').then(response => {
       response.json().then(posts => {
         setPosts(posts);
       });
     });
 
-    fetch ('http://localhost:3001/profile',{
+    fetch ('https://pawsitivelypets-api.onrender.com/profile',{
         credentials: 'include',
       }).then(response => {
         response.json().then(userInfo => {
