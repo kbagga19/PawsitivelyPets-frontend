@@ -12,7 +12,7 @@ body {
 
 /* navbar */
 
-.navbar {
+/* .navbar {
     background-color: #e5eeff;
     height: 12vh;
     width: 100%;
@@ -91,13 +91,13 @@ a:visited {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    height: auto;
-    border-radius: 20px;
+    /* height: auto;
+    border-radius: 20px; */
     /* justify-content: center; */
-    /* display: none; */
+    /*display: none; 
     padding: 0;
 }
-
+/*
 .shopdropdown ul {
     display: flex;
     flex-direction: column;
@@ -122,11 +122,11 @@ a:visited {
     display: block;
     align-items: center;
     justify-content: center;
-}
+} */
 
 /* signup page */
 
-.sign-up {
+/* .sign-up {
     position: absolute;
     background-color: white;
     display: flex;
@@ -148,10 +148,10 @@ a:visited {
 .container1 {
     padding: 16px;
 }
-  
+   */
 /* Full-width input fields */
 
-input[type=text], input[type=password], input[type=email] {
+/* input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -163,18 +163,18 @@ input[type=text], input[type=password], input[type=email] {
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
     background-color: #ddd;
     outline: none;
-}
+} */
   
 /* Overwrite default styles of hr */
 
-hr {
+/* hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
 }
-  
+   */
 /* Set a style for the submit/register button */
 
-.registerbtn {
+/* .registerbtn {
     background-color: #ffd100;
     color: black;
     padding: 16px 20px;
@@ -207,16 +207,16 @@ hr {
 #cross {
     float: right;
     cursor: pointer;
-}
+} */
 
-.opacity {
+/* .opacity {
     opacity: 0.5;
-    /* background: rgba(0, 0, 0, 0.5); */
-}
+    background: rgba(0, 0, 0, 0.5);
+} */
 
 /* signin page */
 
-.sign-in {
+/* .sign-in {
     position: absolute;
     background-color: white;
     display: flex;
@@ -225,11 +225,11 @@ hr {
     width: 50vw;
     height: auto;
     z-index: 20;
-    /* object-fit: contain; */
+    object-fit: contain;
     font-family: "Fredoka One",cursive;
     display: none;
-    /* overflow-x: hidden;
-    overflow-y: auto; */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .sign-in::-webkit-scrollbar {
@@ -273,7 +273,7 @@ hr {
 #cross, #cross1 {
     float: right;
     cursor: pointer;
-}
+} */
 
 /* body */
 
@@ -809,6 +809,126 @@ hr {
     100% {
     transform: scale(1, 1);
     }
+    }
+
+    @media screen and (max-width: 400px) {
+        #shopspacex {
+            margin-bottom: 2.5rem;
+            font-size: 1.5rem;
+        }
+
+        #glasses {
+            margin-top: 6rem;
+        }
+
+        .zoomout {
+            height: 40vh;
+        }
+
+        .products {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+        }
+
+        .shop__main {
+            height: 100%;
+        }
+
+        .img1 {
+            box-shadow: 0 5px 20px rgba(0,0,0,.3);
+            width: 100%;
+            padding: 1em;
+            height: 100%;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+
+        .img1 img {
+            width: 100%;
+            height: 14rem;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+        }
+
+        .item div{
+            width: 100%;
+        }
+
+        .item_img {
+            width: 100vw;
+        }
+
+        .item-opacity {
+            width: 100vw !important;
+        }
+
+        .content{
+            left: 0;
+            right: 0;
+            font-size: 2.2rem;
+        }
+
+        .item_img h1, .item_img1 h1, .item_img2 h1 {
+            text-align: center;
+        }
+
+        .view_products {
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media screen and ((min-width: 400px) and (max-width: 800px)){
+        #shopspacex {
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+        }
+
+        #glasses {
+            margin-top: 11rem;
+        }
+
+        .zoomout {
+            height: 40vh;
+        }
+
+        .products {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+        }
+
+        .shop__main {
+            height: 400vh;
+        }
+
+        .img1 {
+            box-shadow: 0 5px 20px rgba(0,0,0,.3);
+            width: 100%;
+            padding: 1em;
+            height: 100%;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+
+        .img1 img {
+            width: 100%;
+            height: 15rem;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     @media screen and (min-width: 1497.6px){
