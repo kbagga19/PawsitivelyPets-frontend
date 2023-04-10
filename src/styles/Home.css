@@ -671,3 +671,311 @@ ul{
 /* #greeting {
     display: none;
 } */
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 800px){
+    .TwoThirdpart{
+        height: 70vh;  
+        width: 100%;
+        background-color: #e5eeff;
+        display: flex;
+        flex-direction: column;
+    }
+    .homeleft{
+        height: 35vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .homeright{
+        height: 35vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .homeleft>span{
+        font-size: 3rem;
+        padding-left: 10%;
+        font-family: "Fredoka One",cursive;
+    }
+    .OneThirdpart{
+        height: 100vh;
+    }
+    
+    .buttoncontainer{
+        display: flex;
+        flex-direction: column;
+        padding:10%;
+        justify-content: space-evenly;
+        width: 55vw;
+        height: 5vh;
+    }
+    .span1{
+        text-align: center;
+        width: 40vw;
+        height: 5vh;
+    }
+    .span2{
+        margin-top: 15px;
+        text-align: center;
+        width: 50vw;
+        height: 5vh;
+    }
+    
+    .catimg {
+        width: 35vw;
+        margin-bottom: -22px;
+        margin-left: -120px;
+    }
+    .dryerimg{
+        height: 16.5em;
+        margin-bottom: -17px;
+    }
+    .combimg{
+        height: 17em;
+        margin-left: -70px;
+        margin-bottom: -115px;
+        z-index: 1;
+    }
+    .dogimg{
+        height: 35vh;
+        margin-left: -8em;
+        z-index: 0;
+    }
+    .row{
+        height: 35vh;
+        flex-wrap: wrap;
+    }
+    .counter-box{
+        width: 40vw;
+        height: 15vh;
+        padding: 0%;
+    }
+
+    .heading{
+        height: 10vh;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 200vh;
+        align-items: center; 
+    }
+
+    .card{
+        width: 70%;
+    }
+
+    .container img{
+        width: 75vw;
+    }
+
+    .intro{
+        width: 70vw;
+    }
+
+    .home-blogs-section{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+
+    .carousel{
+        width: 100%;
+    }
+      
+    .slide img{
+        width: 400px;
+    }
+    
+    .adoption {
+        display:flex;
+        justify-content: space-between; 
+        height: 120vh;
+        width: 100%;
+    }
+    
+    .adoptionContent{
+        margin-left: 7%;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        height: 115vh;
+        box-shadow: 5px 10px 15px gray;
+        border-radius: 20px;
+        background: linear-gradient(to left, #e5eeff, #ffffff);
+    }
+    
+    .adoptleft {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        padding: 5%;
+    }
+    .adoptright{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        border-radius: 20px;
+    }
+    .adoptright>p{
+        font-size: 1rem;
+    }
+    .adoptright>button{
+        width: 40vw;
+    } 
+
+    .sign-in, .sign-up {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+    
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+    .TwoThirdpart{
+        height: 70vh;  
+        width: 100%;
+        background-color: #e5eeff;
+        display: flex;
+        flex-direction: column;
+    }
+    .homeleft{
+        height: 35vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .homeright{
+        height: 35vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .homeleft>span{
+        font-size: 4.5rem;
+        padding-left: 10%;
+        font-family: "Fredoka One",cursive;
+    }
+    .OneThirdpart{
+        height: 100vh;
+    }
+    
+    .buttoncontainer{
+        display: flex;
+        flex-direction: column;
+        padding:10%;
+        justify-content: space-evenly;
+        width: 45vw;
+        height: 5vh;
+    }
+    .span1{
+        text-align: center;
+        width: 30vw;
+        height: 5vh;
+    }
+    .span2{
+        margin-top: 15px;
+        text-align: center;
+        width: 30vw;
+        height: 5vh;
+    }
+    
+    .catimg {
+        width: 35vw;
+        margin-bottom: -39px;
+        margin-left: -120px;
+    }
+    .dryerimg{
+        height: 20.5em;
+        margin-bottom: -17px;
+    }
+    .combimg{
+        height: 24em;
+        margin-left: -80px;
+        margin-bottom: -140px;
+        z-index: 1;
+    }
+    .dogimg{
+        height: 45vh;
+        margin-left: -10em;
+        z-index: 0;
+    }
+    .heading{
+        height: 10vh;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        height: 130vh;
+        align-items: center; 
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: 35%;
+        height:50vh;
+    }
+
+    .container img{
+        width: 40vw;
+    }
+
+    .intro{
+        width: 35vw;
+    }
+
+    .home-blogs-section{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+    .slide img{
+        width: 130%;
+    }
+    .carousel{
+        width: 100%;
+    }
+    .adoption {
+        display:flex;
+        justify-content: space-between; 
+        height: 120vh;
+        width: 100%;
+    }
+    
+    .adoptionContent{
+        margin-left: 7%;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        height: 90vh;
+        box-shadow: 5px 10px 15px gray;
+        border-radius: 20px;
+        background: linear-gradient(to left, #e5eeff, #ffffff);
+    }
+    
+    .adoptleft {
+        display: flex;
+        align-items: center;
+        padding: 5%;
+    }
+    .adoptright{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        border-radius: 20px;
+    }
+    .adoptright>p{
+        font-size: 1rem;
+    }
+    
+}
