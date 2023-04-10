@@ -6,15 +6,18 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import {CartState} from '../Context/Context';
+import CloseIcon from '@mui/icons-material/Close';
+import $ from 'jquery';
 
 const Navbar = () => {
   const [openprofile, setOpenProfile] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
   const [username, setUsername] = useState(null);
 
   const {
     state: { cart },
   } = CartState();
-  
+
   useEffect(() => {
     fetch('https://pawsitivelypets-api.onrender.com/profile',{
         credentials: 'include',
@@ -35,7 +38,35 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
+    { dropdown && (
+        <div id="droplist">
+            <span id='dropclose' onClick={() => setDropdown((prev) => !prev)}><CloseIcon/></span>
+            <div className="dropcontent">
+            <ul>
+                <li><Link to={'/'}>Home</Link></li><hr/>
+                <li><Link to={'/shop'}>Shop</Link></li><hr/>
+                <li><Link to={'/blog'}>Blogs</Link></li><hr/>
+                <li><Link to={'/adoption'}>Adoption</Link></li><hr/>
+                <li>
+                {!username && (
+                    <>
+                        <span className="span2" id="droploginbtn"><Link to={'/'}>SIGN IN</Link></span>
+                    </>
+                )}
+                {username && (
+                        <>
+                            <span className="span2" onClick={logout}>LOGOUT</span>
+                        </>
+                )}
+                </li>
+            </ul>
+            </div>
+        </div>
+        )
+    }  
         <div className="left">
+        <div id='hamburger' onClick={() => setDropdown((prev) => !prev)}><img src={require('../images/menu.png')}/></div>
+        
             <li><Link to={'/'}>HOME</Link></li>
             <li className="shop" onClick={() => setOpenProfile((prev) => !prev)}>SHOP
                 <span>
@@ -57,7 +88,7 @@ const Navbar = () => {
             <li><Link to={'/adoption'}>ADOPTION</Link></li>
         </div>
         <div className="center">            
-            <a href="../index.html"><img src={require('../images/logo.png')}/></a>
+            <Link to={'/'}><img src={require('../images/logo.png')}/></Link>
         </div>
         <div className="right">
             <li><Link to={'/footer'}>CONTACT</Link></li>
