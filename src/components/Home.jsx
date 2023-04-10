@@ -26,6 +26,7 @@ const Home = () => {
     const [openprofile, setOpenProfile] = useState(false);
     const [opensignin, setopensignin] = useState(false);
     const [opensignup, setopensignup] = useState(false);
+    const [dropdown, setDropdown] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -47,6 +48,13 @@ const Home = () => {
         setPosts(posts);
       });
     });
+    fetch('https://pawsitivelypets-api.onrender.com/profile',{
+            credentials: 'include',
+          }).then(response => {
+            response.json().then(userInfo => {
+                setUsername(userInfo.name);
+            });
+          });
   }, []);
 
     async function register(ev) {
@@ -82,6 +90,7 @@ const Home = () => {
 
     const handleClick = event => {
         setopensignin(current => !current); 
+        setDropdown(current => !current);
     };
 
     const handleSignUpClick = event => {
@@ -96,24 +105,27 @@ const Home = () => {
     useEffect(() => {
         $(document).ready(function(){
             $('#sign_in').click(function(){
-              $('body').css('overflow', "hidden");
+              $('body').css('overflow', "hidden !important");
+              $('html').css('overflow', "hidden");
             });  
           
             $('#cross1').click(function(){
               $('body').css('overflow', "visible");
+              $('html').css('overflow', "visible");
             });
           
             $('#cross').click(function(){
               $('body').css('overflow', "visible");
+              $('html').css('overflow', "visible");
             });
           });
-          fetch('https://pawsitivelypets-api.onrender.com/profile',{
-            credentials: 'include',
-          }).then(response => {
-            response.json().then(userInfo => {
-                setUsername(userInfo.name);
-            })
-          })
+        //   fetch('http://localhost:3001/profile',{
+        //     credentials: 'include',
+        //   }).then(response => {
+        //     response.json().then(userInfo => {
+        //         setUsername(userInfo.name);
+        //     })
+        //   })
     }, [])
 
     function logout() {
@@ -130,7 +142,35 @@ const Home = () => {
     <>
     <div>
     <div className={`navbar ${opensignin ? 'opacity' : ''} ${opensignup ? 'opacity' : ''}`}>
+    { dropdown && (
+        <div id="droplist">
+            <span id='dropclose' onClick={() => setDropdown((prev) => !prev)}><CloseIcon/></span>
+            <div className="dropcontent">
+            <ul>
+                <li><Link to={'/'}>Home</Link></li><hr/>
+                <li><Link to={'/shop'}>Shop</Link></li><hr/>
+                <li><Link to={'/blog'}>Blogs</Link></li><hr/>
+                <li><Link to={'/adoption'}>Adoption</Link></li><hr/>
+                <li>
+                {!username && (
+                    <>
+                        <span className="span2" onClick={handleClick} id="droploginbtn">SIGN IN</span>
+                    </>
+                )}
+                {username && (
+                        <>
+                            <span className="span2" onClick={logout}>LOGOUT</span>
+                        </>
+                )}
+                </li>
+            </ul>
+            </div>
+        </div>
+        )
+    }  
         <div className="left">
+        <div id='hamburger' onClick={() => setDropdown((prev) => !prev)}><img src={require('../images/menu.png')}/></div>
+
             <li><Link to={"/"}>HOME</Link></li>
             <li className="shop" onClick={() => setOpenProfile((prev) => !prev)}>SHOP
                 <span>
@@ -194,7 +234,7 @@ const Home = () => {
                 required/>
         
             <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Enter Email" name="email" id="email" 
+            <input type="email" placeholder="Enter Email" name="email" id="login-email" 
                 value = {email}
                 onChange = {ev => setEmail(ev.target.value)}
                 required/>
