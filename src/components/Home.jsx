@@ -43,12 +43,12 @@ const Home = () => {
     }, [])    
 
   useEffect(() => {
-    fetch('https://pawsitivelypets-api.onrender.com/homePost').then(response => {
+    fetch('http://localhost:3001/homePost').then(response => {
       response.json().then(posts => {
         setPosts(posts);
       });
     });
-    fetch('https://pawsitivelypets-api.onrender.com/profile',{
+    fetch('http://localhost:3001/profile',{
             credentials: 'include',
           }).then(response => {
             response.json().then(userInfo => {
@@ -59,7 +59,7 @@ const Home = () => {
 
     async function register(ev) {
         ev.preventDefault();
-        const response = await fetch('https://pawsitivelypets-api.onrender.com/register', {
+        const response = await fetch('http://localhost:3001/register', {
             method: 'POST',
             body: JSON.stringify({name, email, password}),
             headers: {'Content-Type':'application/json'}
@@ -73,7 +73,7 @@ const Home = () => {
 
     async function login(ev){
         ev.preventDefault();
-        const response = await fetch('https://pawsitivelypets-api.onrender.com/login', {
+        const response = await fetch('http://localhost:3001/login', {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {'Content-Type':'application/json'},
@@ -129,7 +129,7 @@ const Home = () => {
     }, [])
 
     function logout() {
-        fetch('https://pawsitivelypets-api.onrender.com/logout', {
+        fetch('http://localhost:3001/logout', {
             credentials: 'include',
             method: 'POST'
         });
@@ -159,7 +159,7 @@ const Home = () => {
                 )}
                 {username && (
                         <>
-                            <span className="span2" onClick={logout}>LOGOUT</span>
+                            <span className="span2" id="droplogoutbtn" onClick={logout}>LOGOUT</span>
                         </>
                 )}
                 </li>
