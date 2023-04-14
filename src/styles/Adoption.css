@@ -1,12 +1,14 @@
 body {
     margin: 0;
-    padding: 0;  
+    padding: 0; 
 }
 
 * {
     box-sizing: border-box;
     text-decoration: none; 
 }
+
+
 
 /* ADOPTION PROCESS POINTS */
 
@@ -16,7 +18,7 @@ body {
 }
 
 .journey>h1{
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
     font-family: "Fredoka One",cursive;
     text-align: center;
 }
@@ -28,12 +30,13 @@ body {
 
 .journeyright{
     width: 40%;
-    height: 85vh;
+    height: 88vh;
 }
 
 .journeyright>img{
     /* margin-left: 22vh; */
-    height: 85vh;
+    width: 100%;
+    height: 100%;
 }
 
 .journeyleft{
@@ -223,4 +226,401 @@ textarea{
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 400px) {
+    .journey{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .journey>h1{
+        margin-bottom: 5vh;
+        font-family: "Fredoka One",cursive;
+        text-align: center;
+    }
+    
+    .journeycontent{
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+    }
+    
+    .journeyright{
+        width: 100%;
+        height: 68vh;
+    }
+    
+    .journeyright>img{
+        /* margin-left: 22vh; */
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .journeyleft{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 120vh;
+        padding: 30px;
+    }
+    
+    
+    /* FREQUENTLY ASKED QUESTIONS */
+   
+    .questionsContainer{
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .questionsContainer>h1{
+        margin-top: 20%;
+        font-family: "Fredoka One",cursive;
+        text-align: center;
+    }
+    
+    .questionsContent{
+        margin-left: 0%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80vh;
+    } 
+    
+    /* ADOPTION FORM */
+    
+    .MainForm{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        font-family: "Readex Pro", Sans-serif;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+    .formContainer{
+        max-width: 100%;
+        width: 90%;
+        height: 100%;
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .formTitle{
+        font-size: 1.5rem;
+        font-weight: 500;
+        position: relative;
+        font-family: "Fredoka One",cursive;
+    }
+    
+    .formTitle::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-top: 10px;
+        height: 3px;
+        width: 30px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+    .user-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+    }
+    
+    .user-details .input-box{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .user-details .input-box .details{
+        font-weight: 500;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .user-details .input-box input{
+        height: 40px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 16px;
+        border-bottom-width: 2px;
+        transition: ll 0.3s ease;
+    }
+    
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid{
+        border-color: #9b59b6;
+    }
+    textarea{
+        width: 100%;
+        padding: 20px;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-family: "Readex Pro", Sans-serif;
+        font-size: 16px;
+    }
+    
+    .formbutton{
+        margin-left: 32%;
+        height: 45px;
+    }
+    
+    .formbutton input{
+        height: 100%;
+        width: 50%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+}
 
+@media screen and ((min-width: 400px) and (max-width: 800px)) {
+    .journey{
+        height: 188vh;
+        width: 100%;
+    }
+    
+    .journey>h1{
+        margin-bottom: 5vh;
+        font-family: "Fredoka One",cursive;
+        text-align: center;
+    }
+    
+    .journeycontent{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .journeyright{
+        width: 100%;
+        height: 68vh;
+    }
+    
+    .journeyright>img{
+        /* margin-left: 22vh; */
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .journeyleft{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 30px;
+    }
+    
+    
+    /* FREQUENTLY ASKED QUESTIONS */
+   
+    .questionsContainer{
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .questionsContainer>h1{
+        margin-top: 20%;
+        font-family: "Fredoka One",cursive;
+        text-align: center;
+    }
+    
+    .questionsContent{
+        margin-left: 0%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80vh;
+    } 
+    
+    /* ADOPTION FORM */
+    
+    .MainForm{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        font-family: "Readex Pro", Sans-serif;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+    .formContainer{
+        max-width: 100%;
+        width: 90%;
+        height: 100%;
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .formTitle{
+        font-size: 1.5rem;
+        font-weight: 500;
+        position: relative;
+        font-family: "Fredoka One",cursive;
+    }
+    
+    .formTitle::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-top: 10px;
+        height: 3px;
+        width: 30px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+    .user-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+    }
+    
+    .user-details .input-box{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .user-details .input-box .details{
+        font-weight: 500;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .user-details .input-box input{
+        height: 40px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 16px;
+        border-bottom-width: 2px;
+        transition: ll 0.3s ease;
+    }
+    
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid{
+        border-color: #9b59b6;
+    }
+    textarea{
+        width: 100%;
+        padding: 20px;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-family: "Readex Pro", Sans-serif;
+        font-size: 16px;
+    }
+    
+    .formbutton{
+        margin-left: 32%;
+        height: 45px;
+    }
+    
+    .formbutton input{
+        height: 100%;
+        width: 50%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+} 
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+    /* ADOPTION PROCESS POINTS */
+
+    .journey{
+        height: 80vh;
+    }
+
+    .journeyright{
+        height: 50vh;
+        width: 60vw;
+    }
+    .journeyleft{
+        width: 50%;
+        height: 60vh;
+        display: flex;
+        padding-right: 30px;
+        justify-content: space-around;
+    } 
+
+    .adoptionpoints{
+        height: 15vh;
+    }
+
+
+    /* FREQUENTLY ASKED QUESTIONS */
+
+    .questionsContainer{
+        width: 100%;
+        height: 60vh;
+    }
+
+    .questionsContainer>h1{
+        margin-top: 10%;
+        font-family: "Fredoka One",cursive;
+        text-align: center;
+    }
+
+    .questionsContent{
+        margin-left: 10%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 40vh;
+    }
+
+
+    /* ADOPTION FORM */
+
+    .MainForm{
+        display: flex;
+        height: 70vh;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-family: "Readex Pro", Sans-serif;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+
+    .formContainer{
+        max-width: 90%;
+        width: 90%;
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        height: 60vh;
+    }
+
+}
