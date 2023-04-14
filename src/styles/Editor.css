@@ -59,3 +59,32 @@ body {
         padding: 9px;
     }
 }
+
+@media screen and (max-width: 800px){
+    .writeBlogForm {
+        width: 100%;
+        padding: 5%;
+        margin-bottom: 10%;
+    }
+    .writeBlogForm input{
+        font-size: 1.2rem;
+    }
+    .createpostbtn {
+        width: 40%;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+    .writeBlogForm {
+        width: 100%;
+        padding: 5%;
+        margin-bottom: 10%;
+    }
+    .writeBlogForm input{
+        font-size: 1.2rem;
+    }
+    .createpostbtn {
+        font-size: 1.2rem;
+    }
+}
