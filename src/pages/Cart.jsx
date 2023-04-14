@@ -19,7 +19,7 @@ const Cart = () => {
   useEffect(() => {
       settotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
 
-      fetch ('https://pawsitivelypets-api.onrender.com/profile',{
+      fetch ('http://localhost:3001/profile',{
         credentials: 'include',
       }).then(response => {
         response.json().then(userInfo => {
@@ -45,18 +45,18 @@ const Cart = () => {
           <div >
               <table className="cartItems">
                 <tr className="cartHead">
-                  <th class="headItems">Items</th>
-                  <th>Price</th>
+                  <th className="headItems">Items</th>
+                  <th className='pricehead'>Price</th>
                   <th>Quantity</th>
                   <th>Total</th> 
                 </tr>
                 {
                   cart.map((prod) => (
-                    <tr class="cartBox"><td class="addedItem">
-                    <img class="cartItemImg" src={prod.img} alt=""/>
-                      <h2 class="itemName">{prod.title}</h2></td>
-                      <td class="price">Rs. {prod.price}</td>
-                      <td><input type="number" value={prod.qty} class="quantity" min="1" id="input"
+                    <tr className="cartBox"><td className="addedItem">
+                    <img className="cartItemImg" src={prod.img} alt=""/>
+                      <h2 className="itemName">{prod.title}</h2></td>
+                      <td className="price">Rs. {prod.price}</td>
+                      <td><input type="number" value={prod.qty} className="quantity" min="1" id="input"
                         onChange={(e) =>
                           dispatch({
                             type : "CHANGE_CART_QTY",
@@ -67,13 +67,13 @@ const Cart = () => {
                           })
                         }
                       /></td>
-                      <td class="totalAmt">Rs. {prod.price * prod.qty}</td>
+                      <td className="totalAmt">Rs. {prod.price * prod.qty}</td>
                       <td onClick={() => {
                         dispatch({
                           type: "REMOVE_FROM_CART",
                           payload: prod,
                         })
-                      }} class="delete"><span><DeleteIcon/></span></td></tr>
+                      }} className="delete"><span><DeleteIcon/></span></td></tr>
                   ))
                 }
               </table>
