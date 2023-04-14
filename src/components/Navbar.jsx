@@ -34,6 +34,7 @@ const Navbar = () => {
         method: 'POST'
     });
     setUsername(null);
+    alert("User Logged Out!");
   }
 
   return (
