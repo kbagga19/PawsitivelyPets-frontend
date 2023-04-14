@@ -131,6 +131,7 @@ const Home = () => {
             method: 'POST'
         });
         setUsername(null);
+        alert("User Logged Out!");
       }
     
     
