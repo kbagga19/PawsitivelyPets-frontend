@@ -19,7 +19,7 @@ const Cart = () => {
   useEffect(() => {
       settotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
 
-      fetch ('http://localhost:3001/profile',{
+      fetch ('https://pawsitivelypets-api.onrender.com/profile',{
         credentials: 'include',
       }).then(response => {
         response.json().then(userInfo => {
