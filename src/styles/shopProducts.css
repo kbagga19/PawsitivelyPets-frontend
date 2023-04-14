@@ -102,3 +102,28 @@ body {
     transform: scale(1.1);
 }
 
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 800px){
+    .shop-content{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(27vw, auto));
+        gap: 1.5rem;
+    }
+    
+    .product-card{
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+    .shop-content{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(27vw, auto));
+        gap: 1.5rem;
+    }
+    
+    .product-card{
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    }
+}
