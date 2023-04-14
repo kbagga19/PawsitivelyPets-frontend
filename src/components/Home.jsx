@@ -106,17 +106,14 @@ const Home = () => {
         $(document).ready(function(){
             $('#sign_in').click(function(){
               $('body').css('overflow', "hidden !important");
-              $('html').css('overflow', "hidden");
             });  
           
             $('#cross1').click(function(){
               $('body').css('overflow', "visible");
-              $('html').css('overflow', "visible");
             });
           
             $('#cross').click(function(){
               $('body').css('overflow', "visible");
-              $('html').css('overflow', "visible");
             });
           });
         //   fetch('http://localhost:3001/profile',{
