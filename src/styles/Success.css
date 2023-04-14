@@ -68,3 +68,13 @@ a:visited {
   width: 300px;
   padding: 10px;
 }
+
+@media only screen and (max-width: 800px) {
+  .success {
+    width: 90%;
+  }
+  .success h2 {
+    width: 90vw;
+    text-align: center;
+  }
+}
