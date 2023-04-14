@@ -48,7 +48,7 @@ const Home = () => {
         setPosts(posts);
       });
     });
-    fetch('http://localhost:3001/profile',{
+    fetch('https://pawsitivelypets-api.onrender.com/profile',{
             credentials: 'include',
           }).then(response => {
             response.json().then(userInfo => {
