@@ -198,7 +198,6 @@ a:visited {
         height: 100%;
         -webkit-animation: slide 0.5s forwards;
         animation: slide 0.5s forwards;
-        overflow-y: hidden !important;
         position: fixed;
     }
     
@@ -207,7 +206,6 @@ a:visited {
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow-y: hidden;
     }
 
     #greeting {
@@ -291,7 +289,6 @@ a:visited {
         height: 100%;
         -webkit-animation: slide 0.5s forwards;
         animation: slide 0.5s forwards;
-        overflow-y: hidden !important;
         position: fixed;
     }
     
@@ -300,7 +297,6 @@ a:visited {
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow-y: hidden;
     }
 
     #greeting {
