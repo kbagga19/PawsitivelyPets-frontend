@@ -117,3 +117,245 @@
     flex-direction: column;
     width: 50vw;
 }
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 800px) {
+    .footer-secondbar{
+        display: flex;
+        justify-content: space-between;
+        font-family: "Readex Pro", Sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .footer-list {
+        display: flex;
+    }
+    .footer-list ul{
+        padding: 0;
+        line-height: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 30vw;
+        padding-left: 25px;
+        align-items: flex-start;
+    }
+    
+    .main-footer{
+        text-align: center;
+        padding-top: 3%;
+    }
+    
+    .main-footer>span{
+        font-family: "Fredoka One",cursive;
+        font-size: 3rem;
+    }
+    
+    .main-footer-email{
+        width: 60%;
+        margin-top: 3%;
+        margin-left: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .main-footer-email>span{
+        font-size:1.2rem;
+        font-family: "Readex Pro", Sans-serif;
+        padding: 20px;
+    }
+    .main-footer-email>button{
+        border: none;
+        cursor: pointer;
+        padding: 15px 30px;
+        border-radius: 30px;
+        background-color: #ffd100;
+        font-family: "Readex Pro", Sans-serif;
+        font-weight: bold;
+    }
+    
+    .main-footer>div>img{
+        width: 46vh;
+    }
+    
+    .footer-foot {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-family: "Readex Pro", Sans-serif;
+    }
+    .details {
+        margin: 0;
+        padding: 0;
+    }
+
+    .termsprivacy ul {
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+    .footer-secondbar{
+        display: flex;
+        justify-content: space-between;
+        font-family: "Readex Pro", Sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .footer-list {
+        display: flex;
+    }
+    .footer-list ul{
+        padding: 0;
+        line-height: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 30vw;
+        padding-left: 25px;
+        align-items: flex-start;
+    }
+    
+    .main-footer{
+        text-align: center;
+        padding-top: 3%;
+    }
+    
+    .main-footer>span{
+        font-family: "Fredoka One",cursive;
+        font-size: 3rem;
+    }
+    
+    .main-footer-email{
+        width: 60%;
+        margin-top: 3%;
+        margin-left: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .main-footer-email>span{
+        font-size:1.2rem;
+        font-family: "Readex Pro", Sans-serif;
+        padding: 20px;
+    }
+    .main-footer-email>button{
+        border: none;
+        cursor: pointer;
+        padding: 15px 30px;
+        border-radius: 30px;
+        background-color: #ffd100;
+        font-family: "Readex Pro", Sans-serif;
+        font-weight: bold;
+    }
+    
+    .main-footer>div>img{
+        width: 46vh;
+    }
+    
+    .footer-foot {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-family: "Readex Pro", Sans-serif;
+    }
+    .details {
+        margin: 0;
+        padding: 0;
+    }
+
+    .termsprivacy ul {
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* @media screen and ((min-width: 400px) and (max-width: 800px)){
+    .footer-secondbar{
+        display: flex;
+        justify-content: space-between;
+        font-family: "Readex Pro", Sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .footer-list {
+        display: flex;
+    }
+    .footer-list ul{
+        padding: 0;
+        line-height: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 30vw;
+        padding-left: 25px;
+        align-items: flex-start;
+    }
+    
+    .main-footer{
+        text-align: center;
+        padding-top: 3%;
+    }
+    
+    .main-footer>span{
+        font-family: "Fredoka One",cursive;
+        font-size: 3rem;
+    }
+    
+    .main-footer-email{
+        width: 60%;
+        margin-top: 3%;
+        margin-left: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .main-footer-email>span{
+        font-size:1.2rem;
+        font-family: "Readex Pro", Sans-serif;
+        padding: 20px;
+    }
+    .main-footer-email>button{
+        border: none;
+        cursor: pointer;
+        padding: 15px 30px;
+        border-radius: 30px;
+        background-color: #ffd100;
+        font-family: "Readex Pro", Sans-serif;
+        font-weight: bold;
+    }
+    
+    .main-footer>div>img{
+        width: 46vh;
+    }
+    
+    .footer-foot {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-family: "Readex Pro", Sans-serif;
+    }
+    .details {
+        margin: 0;
+        padding: 0;
+    }
+
+    .termsprivacy ul {
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+} */
