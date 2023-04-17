@@ -26,6 +26,7 @@ const modules = {
 
 export default function CreatePost() {
   const [username, setUsername] = useState(null);
+    const {id} = useParams();
   
   const navigate = useNavigate();  
   const [title, setTitle] = useState('');
