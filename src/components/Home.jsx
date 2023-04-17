@@ -5,7 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import CloseIcon from '@mui/icons-material/Close';
 import {useState, useEffect} from 'react';
 import $ from 'jquery';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Footer from './Footer';
 import { Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
