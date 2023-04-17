@@ -4,7 +4,7 @@ import { CartState } from '../Context/Context'
 import Navbar from '../components/Navbar';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Cart = () => {
   const [username, setUsername] = useState(null);
@@ -15,11 +15,12 @@ const Cart = () => {
   } = CartState();
 
   const [total, settotal] = useState();
+  const {id} = useParams();
 
   useEffect(() => {
       settotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
 
-      fetch ('https://pawsitivelypets-api.onrender.com/profile',{
+      fetch (`https://pawsitivelypets-api.onrender.com/profile/${id}`,{
         credentials: 'include',
       }).then(response => {
         response.json().then(userInfo => {
