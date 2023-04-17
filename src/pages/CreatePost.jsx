@@ -3,7 +3,7 @@ import '../styles/Editor.css'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import {useState} from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import NavBar from '../components/Navbar'
 
 const modules = {
@@ -52,7 +52,7 @@ export default function CreatePost() {
   }
 
   useEffect(() => {
-    fetch ('https://pawsitivelypets-api.onrender.com/profile',{
+    fetch (`https://pawsitivelypets-api.onrender.com/profile/${id}`,{
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
