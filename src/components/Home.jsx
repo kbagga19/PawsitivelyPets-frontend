@@ -22,6 +22,7 @@ import img3 from '../images/adoption3.jpeg'
 const images = [img1, img2, img3];
 
 const Home = () => {
+    const {id} = useParams();
     const navigate = useNavigate();    
     const [openprofile, setOpenProfile] = useState(false);
     const [opensignin, setopensignin] = useState(false);
@@ -48,7 +49,7 @@ const Home = () => {
         setPosts(posts);
       });
     });
-    fetch('https://pawsitivelypets-api.onrender.com/profile',{
+    fetch(`https://pawsitivelypets-api.onrender.com/profile/${id}`,{
             credentials: 'include',
           }).then(response => {
             response.json().then(userInfo => {
