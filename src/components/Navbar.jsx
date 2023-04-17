@@ -3,13 +3,14 @@ import '../styles/Navbar.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import {CartState} from '../Context/Context';
 import CloseIcon from '@mui/icons-material/Close';
 import $ from 'jquery';
 
 const Navbar = () => {
+  const {id} = useParams();
   const [openprofile, setOpenProfile] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [username, setUsername] = useState(null);
@@ -19,7 +20,7 @@ const Navbar = () => {
   } = CartState();
 
   useEffect(() => {
-    fetch('https://pawsitivelypets-api.onrender.com/profile',{
+    fetch(`https://pawsitivelypets-api.onrender.com/profile/${id}`,{
         credentials: 'include',
         }).then(response => {
         response.json().then(userInfo => {
