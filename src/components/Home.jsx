@@ -84,7 +84,7 @@ const Home = () => {
 
     function login(ev){
         ev.preventDefault();
-        fetch('http://localhost:3001/login', {
+        fetch('https://pawsitivelypets-api.onrender.com/login', {
             method: 'POST',
             crossDomain: true,
             body: JSON.stringify({email, password}),
@@ -144,10 +144,6 @@ const Home = () => {
     }, [])
 
     function logout() {
-        fetch('https://pawsitivelypets-api.onrender.com/logout', {
-            credentials: 'include',
-            method: 'POST'
-        });
         window.localStorage.clear();
         setUsername([]);
         alert("User Logged Out!");
