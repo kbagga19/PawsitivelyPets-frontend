@@ -145,7 +145,7 @@ const Home = () => {
 
     function logout() {
         window.localStorage.clear();
-        setUsername([]);
+        setUsername(null);
         alert("User Logged Out!");
       }
     
