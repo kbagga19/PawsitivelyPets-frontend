@@ -20,20 +20,27 @@ const Navbar = () => {
   } = CartState();
 
   useEffect(() => {
-    fetch(`https://pawsitivelypets-api.onrender.com/profile/${id}`,{
-        credentials: 'include',
-        }).then(response => {
-        response.json().then(userInfo => {
-            setUsername(userInfo.name);
+    fetch('https://pawsitivelypets-api.onrender.com/profile',{
+        method: "POST",
+        crossDomain: true,
+        headers: {'Content-Type':'application/json',
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*"
+            },    
+        body: JSON.stringify({
+            token: window.localStorage.getItem("token")
+        }),
         })
-    })
+          .then((res) => res.json())
+          .then((data) => {
+                console.log(data);
+                let usname = data.data.name;
+                setUsername(usname);
+            });
   },[]);
 
   function logout() {
-    fetch('https://pawsitivelypets-api.onrender.com/logout', {
-        credentials: 'include',
-        method: 'POST'
-    });
+    window.localStorage.clear();
     setUsername(null);
     alert("User Logged Out!");
   }
