@@ -102,6 +102,8 @@ const Home = () => {
                 window.location.href="./";
                 //navigate("/shop");
                 $('body').css('overflow', "visible");
+            } else {
+                alert('Wrong Credentials!');
             }
         });
     } 
