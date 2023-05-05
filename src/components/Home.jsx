@@ -125,7 +125,7 @@ const Home = () => {
     useEffect(() => {
         $(document).ready(function(){
             $('#sign_in').click(function(){
-              $('body').css('overflow', "hidden !important");
+              $('body').css('overflow', "hidden");
             });  
           
             $('#cross1').click(function(){
