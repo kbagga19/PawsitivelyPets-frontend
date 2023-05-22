@@ -27,6 +27,7 @@ const modules = {
 export default function CreatePost() {
   const [username, setUsername] = useState(null);
     const {id} = useParams();
+  const [Token, setToken] = useState(null);
   
   const navigate = useNavigate();  
   const [title, setTitle] = useState('');
@@ -53,6 +54,7 @@ export default function CreatePost() {
   }
 
   useEffect(() => {
+    const token = window.localStorage.getItem("token");
     fetch ('https://pawsitivelypets-api.onrender.com/profile',{
        method: "POST",
         crossDomain: true,
@@ -61,7 +63,7 @@ export default function CreatePost() {
                 "Access-Control-Allow-Origin": "*"
             },    
         body: JSON.stringify({
-            token: window.localStorage.getItem("token")
+            token
         }),
         })
           .then((res) => res.json())
@@ -69,6 +71,7 @@ export default function CreatePost() {
                 console.log(data);
                 let usname = data.data.name;
                 setUsername(usname);
+                setToken(token);
             });
   }, [])
   
