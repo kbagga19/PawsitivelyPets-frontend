@@ -41,6 +41,7 @@ export default function CreatePost() {
     data.set('summary', summary);
     data.set('content', content);
     data.set('file', files[0]);
+    data.set('token', Token);
     
     ev.preventDefault();
     const response = await fetch('https://pawsitivelypets-api.onrender.com/post', {
