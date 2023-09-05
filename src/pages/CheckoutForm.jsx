@@ -71,7 +71,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "https://pawsitively-pets-frontend.vercel.app/success",
+        return_url: "https://pawsitively-pets.co/success",
         receipt_email: email,
       },
     });
