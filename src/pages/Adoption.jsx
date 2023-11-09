@@ -15,7 +15,7 @@ const Adoption = () => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.sendForm('service_1a30tig', 'template_cpvqk78', form.current, '3l4D56Hv6nafOi3BZ')
+        emailjs.sendForm('service_1a30tig', 'template_9zmbmey', form.current, '3l4D56Hv6nafOi3BZ')
           .then((result) => {
               console.log(result.text);
               alert('Form submitted successfully!')
