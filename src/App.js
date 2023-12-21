@@ -42,12 +42,12 @@ export default function App() {
         <Route exact path='/groomingproducts' element={<GroomingProducts/>}></Route>
         <Route exact path='/accessories' element={<Accessories/>}></Route>
         <Route exact path='/create' element={<Create/>}></Route>
-        <Route exact path='/pets/:id' element={<PetDetails/>}></Route>
-        <Route exact path='/rehome' element={<ReHome/>}></Route>
         <Route exact path='/petAdoption' element={<PetAdoption/>}></Route>
 
         <Route element={<PrivateRoute/>}>
           <Route exact path='/post/:id' element={<PostPage/>}></Route>
+          <Route exact path='/pets/:id' element={<PetDetails/>}></Route>
+          <Route exact path='/rehome' element={<ReHome/>}></Route>
         </Route>
       </Routes>  
     </div>

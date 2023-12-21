@@ -103,6 +103,10 @@
   background-size: 70%;
 }
 
+.dog-card button {
+  padding: 2%;
+}
+
 @media screen and (max-width: 400px) {
   .app {
     display: flex;
