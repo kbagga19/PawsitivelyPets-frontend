@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import DogCard from "../components/DogCard";
+import Navbar from "../components/Navbar";
+import { useEffect } from "react";
+import Footer from "../components/Footer";
 
 const dogsData = [
   {
@@ -71,67 +74,71 @@ const dogsData = [
 
 const MainAdoption = () => {
   const [filters, setFilters] = useState({
-    state: "",
-    city: "",
+    type: "",
+    isRescued: "",
     age: "",
   });
 
-  const [dogs, setDogs] = useState(dogsData);
+  const [pets, setPets] = useState([])
+  const [morePets, setMorePets] = useState([]);
 
   console.log(filters);
+  
+
+  useEffect(() => {
+    fetch('https://pawsitivelypets-api.onrender.com/pets').then(response => {
+        response.json().then(pets => {
+            setPets(pets);
+          setMorePets(pets);
+        });
+      });
+  }, [])
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters({ ...filters, [name]: value });
   };
 
-  const handleAgeFilterChange = (e) => {
-    setFilters({ ...filters, age: e.target.value });
-  };
+//   const handleAgeFilterChange = (e) => {
+//     setFilters({ ...filters, age: e.target.value });
+//   };
 
   const applyFilters = () => {
+    console.log(pets)
     // Implement filter logic here based on 'filters' state
     // Update the display or fetch filtered data from your dogsData
     // For example: Filter dogs based on state, city, and age
-    let filteredDogs = [...dogsData]; // Create a copy of the original data
+    let filteredDogs = [...pets]; // Create a copy of the original data
 
-    // Filter by state
-    if (filters.state !== "") {
+    // Filter by type
+    if (filters.type !== "") {
       filteredDogs = filteredDogs.filter(
-        (dog) => dog.location.state === filters.state
+        (dog) => dog.type === filters.type
       );
     }
 
-    // Filter by city
-    if (filters.city !== "") {
+    // Filter by rescued
+    if (filters.isRescued !== "") {
       filteredDogs = filteredDogs.filter(
-        (dog) => dog.location.city === filters.city
+        (dog) => dog.isRescued === filters.isRescued
       );
     }
 
     // Filter by age
     if (filters.age !== "") {
-      const ageFilter = filters.age;
-      filteredDogs = filteredDogs.filter((dog) => {
-        parseInt(dog.age);
-        if (ageFilter === "lessThan2") {
-          return parseInt(dog.age) < 2;
-        } else if (ageFilter === "2to4") {
-          return parseInt(dog.age) >= 2 && parseInt(dog.age) <= 4;
-        } else if (ageFilter === "moreThan4") {
-          return parseInt(dog.age) > 4;
-        }
-        return true;
-      });
+        filteredDogs = filteredDogs.filter(
+            (dog) => dog.age === filters.age
+        )
     }
 
     console.log(filteredDogs);
-    setDogs(filteredDogs);
+    setMorePets(filteredDogs);
     // Display filtered dogs in the console (for demonstration)
     // Here you might update the state with filteredDogs or render them differently in your app
   };
   return (
     <>
+    <Navbar/>
       <div className="bannerDiv">
         <h1>Dogs Available for Adoption</h1>
       </div>
@@ -139,30 +146,41 @@ const MainAdoption = () => {
       <div className="app">
         <div className="filter-options">
           <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-            <label htmlFor="stateFilter">State:</label>
-            <select id="stateFilter" name="state" onChange={handleFilterChange}>
-              <option value="">--Select State--</option>
-              <option value="MA">MA</option>
-              <option value="WA">WA</option>
-              <option value="TX">TX</option>
+            <label htmlFor="petTypeFilter">Pet Type:</label>
+            <select id="petTypeFilter" name="type" onChange={handleFilterChange}>
+              <option value="">--Select Type--</option>
+              <option value="Dog">Dog</option>
+              <option value="Cat">Cat</option>
             </select>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-            <label htmlFor="cityFilter">City:</label>
-            <select id="cityFilter" name="city" onChange={handleFilterChange}>
-              <option value="">--Select City--</option>
-              <option value="Boston">Boston</option>
-              <option value="Seattle">Seattle</option>
-              <option value="Houston">Houston</option>
+          
+           <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+            <label htmlFor="rescuedFilter">Rescued:</label>
+            <select id="rescuedFilter" name="isRescued" onChange={handleFilterChange}>
+              <option value="">--Select --</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
             </select>
           </div>
+
           <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+            <label htmlFor="ageFilter">Age:</label>
+            <select id="ageFilter" name="age" onChange={handleFilterChange}>
+              <option value="">--Select Age--</option>
+              <option value="Baby">Baby</option>
+              <option value="Adolescence">Adolescence</option>
+              <option value="Adult">Adult</option>
+              <option value="Senior">Senior</option>
+            </select>
+          </div>
+
+          {/* <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             <p style={{ marginBottom: 0 }}>Age:</p>
             <label>
               <input
                 type="radio"
                 name="age"
-                value="lessThan2"
+                value="adult"
                 onChange={handleAgeFilterChange}
               />
               Less than 2 years
@@ -185,18 +203,19 @@ const MainAdoption = () => {
               />
               4 years or older
             </label>
-          </div>
+          </div> */}
           <button style={{ margin: "15px 0" }} onClick={applyFilters}>
             Apply Filters
           </button>
         </div>
 
         <div className="dogs-container">
-          {dogs.map((dog, index) => (
+          {morePets.map((dog, index) => (
             <DogCard key={index} dog={dog} />
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

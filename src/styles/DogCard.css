@@ -31,15 +31,12 @@
 .bannerDiv h1 {
   margin: 0;
   font-size: 2.5rem;
+  grid-area: title;
+  text-align: center;
   /* background-color: rgba(0, 0, 0, 0.402);
   padding: 12px 18px;
   border-radius: 8px;
   border: 2px solid rgb(77, 76, 76); */
-}
-
-h1 {
-  grid-area: title;
-  text-align: center;
 }
 
 .filter-options {

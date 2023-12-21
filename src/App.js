@@ -17,7 +17,7 @@ import PostPage from './pages/PostPage';
 import PrivateRoute from './PrivateRoute';
 import PetDetails from './pages/PetDetails';
 import ReHome from './pages/ReHome';
-import MainAdoption from './pages/MainAdoption';
+import PetAdoption from './pages/PetAdoption';
 
 export default function App() {
 
@@ -44,7 +44,7 @@ export default function App() {
         <Route exact path='/create' element={<Create/>}></Route>
         <Route exact path='/pets/:id' element={<PetDetails/>}></Route>
         <Route exact path='/rehome' element={<ReHome/>}></Route>
-        <Route exact path='/mainAdoption' element={<MainAdoption/>}></Route>
+        <Route exact path='/petAdoption' element={<PetAdoption/>}></Route>
 
         <Route element={<PrivateRoute/>}>
           <Route exact path='/post/:id' element={<PostPage/>}></Route>

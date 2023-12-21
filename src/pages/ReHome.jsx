@@ -86,7 +86,7 @@ const ReHome = () => {
         });
         if (response.ok) {
             alert("Details recorded!")
-            navigate("/adoption");
+            navigate("/petAdoption");
         } else {
             alert("Fill out all fields!")
         }

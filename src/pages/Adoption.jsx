@@ -99,7 +99,7 @@ const Adoption = () => {
 
 
 
-<div className="MainForm">
+{/* <div className="MainForm">
     <div className="formContainer">
         <div className="formTitle">ADOPTION</div>
         <form ref={form} onSubmit={sendEmail} id="contact-form">
@@ -138,7 +138,7 @@ const Adoption = () => {
             </div>
         </form>
     </div>
-</div>
+</div> */}
 
     <div className="questionsContainer">
         <h1>Frequently Asked Questions</h1>
