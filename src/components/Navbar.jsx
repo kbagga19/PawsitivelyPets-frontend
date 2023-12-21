@@ -35,6 +35,9 @@ const Navbar = () => {
           .then((data) => {
                 console.log(data);
                 let usname = data.data.name;
+                let usemail = data.data.email;
+                localStorage.setItem('username', usname);
+                localStorage.setItem('email', usemail);
                 setUsername(usname);
             });
   },[]);
@@ -55,7 +58,7 @@ const Navbar = () => {
                 <li><Link to={'/'}>Home</Link></li><hr/>
                 <li><Link to={'/shop'}>Shop</Link></li><hr/>
                 <li><Link to={'/blog'}>Blogs</Link></li><hr/>
-                <li><Link to={'/adoption'}>Adoption</Link></li><hr/>
+                <li><Link to={'/mainAdoption'}>Adoption</Link></li><hr/>
                 <li>
                 {!username && (
                     <>
@@ -94,7 +97,7 @@ const Navbar = () => {
                 )
             }
             <li><Link to={'/blog'}>BLOGS</Link></li>
-            <li><Link to={'/adoption'}>ADOPTION</Link></li>
+            <li><Link to={'/mainAdoption'}>ADOPTION</Link></li>
         </div>
         <div className="center">            
             <Link to={'/'}><img src={require('../images/logo.png')}/></Link>

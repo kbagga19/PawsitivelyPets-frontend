@@ -1,0 +1,161 @@
+.petdesc-container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.petdesc-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+}
+
+.petdesc-left img {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    border: 10px solid #ffd100;
+}
+
+.petdesc-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.postdate {
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5%;
+    background-color: aliceblue;
+}
+
+#petName {
+    color: #ffd100;
+    font-family: "Fredoka One", cursive;
+}
+
+.petdesc-right p {
+    font-size: 1.2rem;
+}
+
+.petdesc-right p span {
+    font-weight: 600;
+    color: black;
+}
+
+.factscontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.additionalinfo-container {
+    width: 80%;
+    margin: auto;
+}
+
+.additionalinfo-container p {
+    line-height: 2;
+}
+
+.contactinfo-container {
+    width: 80%;
+    margin: auto;
+}
+
+.contactinfo-container>div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.contactinfo-container>div span{
+    font-weight: 600;
+}
+
+@media screen and (max-width: 400px){
+    .petdesc-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+
+    .petdesc-left {
+        width: 90%;
+        padding: 0px;
+        margin: auto;
+    }
+
+    .petdesc-right {
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    .postdate {
+        width: 70%;
+        margin-top: 3%;
+    }
+
+    .factscontainer {
+        display: block;
+    }
+
+    .contactinfo-container>div {
+        display: block;
+    }
+}
+
+@media screen and ((min-width: 400px) and (max-width: 800px)){
+    .petdesc-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+
+    .petdesc-left {
+        width: 90%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    .petdesc-right {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .postdate {
+        width: 70%;
+        margin-top: 3%;
+    }
+
+    .factscontainer {
+        display: block;
+    }
+
+    .contactinfo-container>div {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+    
+    .postdate {
+        width: 80%;
+        margin-top: 3%;
+    }
+
+    .factscontainer {
+        display: block;
+    }
+
+    .contactinfo-container>div {
+        display: block;
+    }
+}

@@ -1,0 +1,235 @@
+.rehomeheading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.petDetails {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.petDetails span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.rehomeForm {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+.rehomeForm input,
+textarea {
+    border: none;
+    background: aliceblue;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.rehomeForm textarea {
+    width: 100%;
+}
+
+.rehomeForm label {
+    padding-bottom: 20px;
+}
+
+.rehomeFileUpload {
+    border: 2px dotted grey;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 60%;
+}
+
+.rehomeFileUpload span {
+    color: blue;
+}
+
+.rehomeForm label span {
+    font-weight: 600;
+}
+
+.rehomebutton {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rehomebutton button {
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #ffd100;
+    font-family: "Readex Pro", Sans-serif;
+    font-weight: bold;
+    border: none;
+}
+
+.rehomeradioinput {
+    display: flex;
+    gap: 50px;
+    flex-wrap: nowrap;
+}
+
+.rehomeradioinput p {
+    text-align: center;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio]+img+p {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+[type=radio]:checked+div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+
+.radioimg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    margin-top: 5%;
+}
+
+#basket {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 85%;
+    height: 80%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 5;
+    margin: 30% auto;
+}
+
+#pet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.radioimg img:nth-child(2) {
+    transform: translateY(30%);
+}
+
+.radioimg:hover img:nth-child(2) {
+    transform: translateY(0);
+}
+
+.radiobtn-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.radiobtn-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 10;
+    left: 0;
+    right: 10;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.radiobtn-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.radiobtn-container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radiobtn-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.radiobtn-container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 400px) {
+    .rehomeradioinput {
+        display: flex;
+        gap: 5px;
+        flex-wrap:wrap;
+    }
+
+    .radioimg {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        overflow: hidden;
+        display: flex;
+        margin-top: 5%;
+    }
+}
+
+@media screen and ((min-width: 400px) and (max-width: 800px)) {
+    .rehomeradioinput {
+        display: flex;
+        gap: 5px;
+        flex-wrap:wrap;
+    }
+
+    .radioimg {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        display: flex;
+        margin-top: 5%;
+    }
+}

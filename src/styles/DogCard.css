@@ -1,0 +1,107 @@
+.app {
+  /* display: grid; */
+  /* grid-template-areas:
+    "title title"
+    "filters cards";
+  gap: 20px;
+  padding: 20px; */
+  margin: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bannerDiv {
+  /* background-color: powderblue; */
+  color: rgb(221, 220, 220);
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      rgba(14, 14, 14, 0.5),
+      rgba(14, 14, 14, 0.781)
+    ),
+    url("../images/banner-image.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid grey;
+}
+
+.bannerDiv h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  /* background-color: rgba(0, 0, 0, 0.402);
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 2px solid rgb(77, 76, 76); */
+}
+
+h1 {
+  grid-area: title;
+  text-align: center;
+}
+
+.filter-options {
+  grid-area: filters;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  gap: 15px;
+}
+
+.dog-card {
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  border-radius: 8px;
+  padding: 16px 30px;
+  margin: 16px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.dog-card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.dog-image {
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+  margin: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.dog-details {
+  flex: 1;
+}
+
+.dog-name {
+  text-align: center;
+}
+
+.owner-details {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.dogs-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  place-items: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/bg-img.jpg");
+  background-repeat: repeat;
+  background-size: 70%;
+}

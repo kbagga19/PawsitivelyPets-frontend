@@ -131,20 +131,20 @@ body {
 
 .MainForm{
     display: flex;
-    height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     padding: 10px;
     font-family: "Readex Pro", Sans-serif;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
 .formContainer{
     max-width: 70%;
     width: 80%;
-    background: #fff;
+    background: aliceblue;
     padding: 25px 30px;
     border-radius: 5px;
+    box-shadow: #9b59b6 1.95px 1.95px 2.6px;
 }
 
 .formTitle{
@@ -199,8 +199,11 @@ body {
 .user-details .input-box input:valid{
     border-color: #9b59b6;
 }
-textarea{
-    width: 210%;
+.textarea-box{
+    width: 100%;
+}
+.textarea-box textarea{
+    width: 100%;
     padding: 20px;
     outline: none;
     border-radius: 5px;
@@ -606,7 +609,7 @@ textarea{
 
     .MainForm{
         display: flex;
-        height: 70vh;
+        height: auto;
         justify-content: center;
         align-items: center;
         padding: 10px;
@@ -620,7 +623,7 @@ textarea{
         background: #fff;
         padding: 25px 30px;
         border-radius: 5px;
-        height: 60vh;
+        height: auto;
     }
 
 }

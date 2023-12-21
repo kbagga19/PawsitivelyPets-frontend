@@ -165,7 +165,7 @@ const Home = () => {
                 <li><Link to={'/'}>Home</Link></li><hr/>
                 <li><Link to={'/shop'}>Shop</Link></li><hr/>
                 <li><Link to={'/blog'}>Blogs</Link></li><hr/>
-                <li><Link to={'/adoption'}>Adoption</Link></li><hr/>
+                <li><Link to={'/mainAdoption'}>Adoption</Link></li><hr/>
                 <li>
                 {!username && (
                     <>
@@ -204,7 +204,7 @@ const Home = () => {
                 )
             }
             <li><Link to={"/blog"}>BLOGS</Link></li>
-            <li><Link to={"/adoption"}>ADOPTION</Link></li>
+            <li><Link to={"/mainAdoption"}>ADOPTION</Link></li>
         </div>
         <div className="center">            
             <Link to={"/blog"}><img src={require('../images/logo.png')}/></Link>

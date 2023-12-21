@@ -1,18 +1,11 @@
-// import logo from './logo.svg';
 import './App.css';
-// import Navbar from './components/Navbar';
 import {Route , Routes} from 'react-router-dom';
 import Home from './components/Home';
 import Shop from './pages/Shop';
 import BlogHome from './pages/BlogHome'; 
 import Cart from './pages/Cart';
 import Footer from './components/Footer';
-import { Link } from 'react-router-dom';
 import Adoption from './pages/Adoption';
-import CheckoutForm from './pages/CheckoutForm';
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
-import {useState, useEffect} from 'react';
 import { CartState } from './Context/Context';
 import Payment from './pages/Payment';
 import Success from './pages/Success';
@@ -21,6 +14,10 @@ import GroomingProducts from './pages/GroomingProducts';
 import Accessories from './pages/Accessories';
 import Create from './pages/CreatePost';
 import PostPage from './pages/PostPage';
+import PrivateRoute from './PrivateRoute';
+import PetDetails from './pages/PetDetails';
+import ReHome from './pages/ReHome';
+import MainAdoption from './pages/MainAdoption';
 
 export default function App() {
 
@@ -45,8 +42,13 @@ export default function App() {
         <Route exact path='/groomingproducts' element={<GroomingProducts/>}></Route>
         <Route exact path='/accessories' element={<Accessories/>}></Route>
         <Route exact path='/create' element={<Create/>}></Route>
-        <Route exact path='/post/:id' element={<PostPage/>}></Route>
+        <Route exact path='/pets/:id' element={<PetDetails/>}></Route>
+        <Route exact path='/rehome' element={<ReHome/>}></Route>
+        <Route exact path='/mainAdoption' element={<MainAdoption/>}></Route>
 
+        <Route element={<PrivateRoute/>}>
+          <Route exact path='/post/:id' element={<PostPage/>}></Route>
+        </Route>
       </Routes>  
     </div>
     
