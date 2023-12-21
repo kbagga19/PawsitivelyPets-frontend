@@ -3,6 +3,12 @@ import DogCard from "../components/DogCard";
 import Navbar from "../components/Navbar";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 
 const dogsData = [
   {
@@ -145,16 +151,66 @@ const MainAdoption = () => {
       {/* <input type="text" onChange={(e) => console.log(e)} /> */}
       <div className="app">
         <div className="filter-options">
-          <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+          {/* <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             <label htmlFor="petTypeFilter">Pet Type:</label>
             <select id="petTypeFilter" name="type" onChange={handleFilterChange}>
               <option value="">--Select Type--</option>
               <option value="Dog">Dog</option>
               <option value="Cat">Cat</option>
             </select>
-          </div>
+          </div> */}
+
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Pet Type</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              name="type"
+              // value={age}
+              label="Pet Type"
+              onChange={handleFilterChange}
+            >
+              <MenuItem value={""}>--Select Type--</MenuItem>
+              <MenuItem value={"Dog"}>Dog</MenuItem>
+              <MenuItem value={"Cat"}>Cat</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl>
+            <InputLabel id="demo-simple-select-label">Rescued</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              name="isRescued"
+              // value={age}
+              label="Rescued"
+              onChange={handleFilterChange}
+            >
+              <MenuItem value={""}>--Select--</MenuItem>
+              <MenuItem value={"Yes"}>Yes</MenuItem>
+              <MenuItem value={"No"}>No</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl>
+            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              name="age"
+              // value={age}
+              label="Age"
+              onChange={handleFilterChange}
+            >
+              <MenuItem value={""}>--Select Age--</MenuItem>
+              <MenuItem value={"Baby"}>Baby</MenuItem>
+              <MenuItem value={"Adolescence"}>Adolescence</MenuItem>
+              <MenuItem value={"Adult"}>Adult</MenuItem>
+              <MenuItem value={"Senior"}>Senior</MenuItem>
+            </Select>
+          </FormControl>
           
-           <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+           {/* <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             <label htmlFor="rescuedFilter">Rescued:</label>
             <select id="rescuedFilter" name="isRescued" onChange={handleFilterChange}>
               <option value="">--Select --</option>
@@ -172,7 +228,7 @@ const MainAdoption = () => {
               <option value="Adult">Adult</option>
               <option value="Senior">Senior</option>
             </select>
-          </div>
+          </div> */}
 
           {/* <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             <p style={{ marginBottom: 0 }}>Age:</p>

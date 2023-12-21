@@ -105,7 +105,7 @@ function PetDetails() {
                         <p><span>🐾 Breed: </span> {petInfo.breed}</p>
                         <p><span>🎂 Age:</span> {petInfo.age}</p>
                         <p><span>🚺 Gender:</span> {petInfo.gender}</p>
-                        <p><span>💉 vaccinated:</span> {petInfo.isVaccinated}</p>
+                        <p><span>💉 Vaccinated:</span> {petInfo.isVaccinated}</p>
                         <p><span>🔍 Pet ID: </span> {petInfo._id.slice(0, 7)}</p>
                     </div>
 
