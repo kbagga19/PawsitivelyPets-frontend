@@ -8,7 +8,43 @@ body {
     text-decoration: none; 
 }
 
+/* ADOPTION HEADING */
 
+.MainAdoptionHeading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fredoka One",cursive;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/bg-img.jpg");
+    width: 100%;
+    background-repeat: repeat;
+    background-size: 70%;
+    place-items: center;
+    padding: 20px;
+    
+}
+
+.MainAdoptionHeading p{
+    font-weight: 400;
+}
+
+.AdoptionButtons button{
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 30px;
+    width: auto;
+    border: none;
+    text-align: center;
+    background-color: #ffd100;
+    font-family: "Readex Pro", Sans-serif;
+    font-weight: bold;
+}
 
 /* ADOPTION PROCESS POINTS */
 

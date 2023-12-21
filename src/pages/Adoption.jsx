@@ -7,6 +7,7 @@ import {useState, useEffect} from 'react';
 import $ from 'jquery';
 import Footer from '../components/Footer';
 import emailjs from '@emailjs/browser';
+import { Link } from 'react-router-dom';
 
 const Adoption = () => {
 
@@ -58,6 +59,14 @@ const Adoption = () => {
     return (
     <div>
         <Navbar/>
+        <div className="MainAdoptionHeading">
+            <h1>Re-Home and Adopt a Pet in India</h1>
+            <p>Every Pet Deserves a Good Home. #Adoptlove</p>
+            <div className="AdoptionButtons">
+                <Link to={"/rehome"}><button>Re-Home Your Pet</button></Link>
+                <Link to={"/petAdoption"}><button>Adopt A Pet</button></Link>
+            </div>
+        </div>
         <div className="journey">
         <h1>Your Pet Adoption Journey With Pawsitively Pets</h1>
         <div className="journeycontent">
@@ -68,7 +77,7 @@ const Adoption = () => {
                 <div className="adoptionpoints">
                     <img src={require('../images/form.png')}/>
                     <div className="pointscontent">
-                        <span>Fill the form</span>
+                        <span>Find pet</span>
                         <p>Adopt a dog or cat or any pet who's right for you. Simply enter your details in the form.</p>
                     </div> 
                 </div>
