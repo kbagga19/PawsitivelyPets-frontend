@@ -59,7 +59,20 @@ function PetDetails() {
                     setPetInfo(petInfo);
                     if (petInfo.img) {
                         const buffer = new Uint8Array(petInfo.img.data);
-                        const base64Image = btoa(String.fromCharCode.apply(null, buffer));
+                        const CHUNK_SIZE = 8192; // Process 8KB chunks
+
+                        let binary = '';
+                        const len = buffer.byteLength;
+                        let start = 0;
+
+                        while (start < len) {
+                            const end = Math.min(start + CHUNK_SIZE, len);
+                            const chunk = new Uint8Array(buffer.slice(start, end));
+                            binary += String.fromCharCode.apply(null, chunk);
+                            start = end;
+                        }
+
+                        const base64Image = btoa(binary);
                         setImageSrc(`data:image/png;base64,${base64Image}`);
                     }
                 })
