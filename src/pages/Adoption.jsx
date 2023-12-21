@@ -78,7 +78,7 @@ const Adoption = () => {
                             <img src={require("../images/animal-care.png")} />
                             <div className="pointscontent">
                                 <span>Find pet</span>
-                                <p>Adopt a dog or cat or any pet who's right for you. Simply explore the adoption page anf find your match</p>
+                                <p>Adopt a dog or cat or any pet who's right for you. Simply explore the adoption page and find your match</p>
                             </div>
                         </div>
                         <div className="adoptionpoints">

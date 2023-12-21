@@ -17,8 +17,8 @@ body {
     align-items: center;
     font-family: "Fredoka One",cursive;
     background-image: linear-gradient(
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.3)
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
     ),
     url("../images/bg-img.jpg");
     width: 100%;
