@@ -102,3 +102,55 @@
   background-repeat: repeat;
   background-size: 70%;
 }
+
+@media screen and (max-width: 400px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dog-card {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .dogs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  .filter-options {
+    width: 100%;
+  }
+
+}
+
+@media screen and ((min-width: 400px) and (max-width: 800px)){
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dog-card {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .dogs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  .filter-options {
+    width: 100%;
+  }
+
+}
