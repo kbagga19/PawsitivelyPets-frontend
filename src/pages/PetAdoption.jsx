@@ -140,7 +140,7 @@ const MainAdoption = () => {
     <>
     <Navbar/>
       <div className="bannerDiv">
-        <h1>Dogs Available for Adoption</h1>
+        <h1>Pets Available for Adoption</h1>
       </div>
       {/* <input type="text" onChange={(e) => console.log(e)} /> */}
       <div className="app">
