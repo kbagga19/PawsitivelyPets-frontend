@@ -60,7 +60,7 @@ function PetDetails() {
                     if (petInfo.img) {
                         const buffer = new Uint8Array(petInfo.img.data);
                         const base64Image = btoa(String.fromCharCode.apply(null, buffer));
-                        setImageSrc(`data:image/*;base64,${base64Image}`);
+                        setImageSrc(`data:image/png;base64,${base64Image}`);
                     }
                 })
             })

@@ -127,6 +127,12 @@
     width: 100%;
   }
 
+  .filter-options button {
+    height: 5vh;
+    width: 50%;
+    align-self: center;
+  }
+
 }
 
 @media screen and ((min-width: 400px) and (max-width: 800px)){
