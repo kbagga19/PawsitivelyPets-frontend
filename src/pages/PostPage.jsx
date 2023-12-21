@@ -6,12 +6,32 @@ import Navbar from '../components/Navbar';
 
 const PostPage = () => {
     const [postInfo, setPostInfo] = useState(null);
+    // const [imageSrc, setImageSrc] = useState('');
+
     const {id} = useParams();
     useEffect(() => {
         fetch(`https://pawsitivelypets-api.onrender.com/post/${id}`)
         .then(response => {
             response.json().then(postInfo => {
                 setPostInfo(postInfo);
+                // if (postInfo.cover) {
+                //     const buffer = new Uint8Array(postInfo.cover.data);
+                //     const CHUNK_SIZE = 8192; // Process 8KB chunks
+
+                //     let binary = '';
+                //     const len = buffer.byteLength;
+                //     let start = 0;
+
+                //     while (start < len) {
+                //         const end = Math.min(start + CHUNK_SIZE, len);
+                //         const chunk = new Uint8Array(buffer.slice(start, end));
+                //         binary += String.fromCharCode.apply(null, chunk);
+                //         start = end;
+                //     }
+
+                //     const base64Image = btoa(binary);
+                //     setImageSrc(`data:image/png;base64,${base64Image}`);
+                // }
             })
         })
     },[]);
@@ -24,6 +44,7 @@ const PostPage = () => {
     <div>
     <div className="banner">
         <img src={`https://pawsitivelypets-api.onrender.com/${postInfo.cover}`}/>
+        {/* <img src={imageSrc} alt="" /> */}
     </div>
     <div class="blog">
         <h1 class="postTitle">{postInfo.title}</h1>
