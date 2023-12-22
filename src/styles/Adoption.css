@@ -430,6 +430,19 @@ body {
         cursor: pointer;
         background: linear-gradient(135deg, #71b7e6, #9b59b6);
     }
+
+    .AdoptionButtons button{
+        margin-right: 10px;
+        cursor: pointer;
+        padding: 15px 30px;
+        border-radius: 30px;
+        width: auto;
+        border: none;
+        text-align: center;
+        background-color: #ffd100;
+        font-family: "Readex Pro", Sans-serif;
+        font-weight: bold;
+    }
 }
 
 @media screen and ((min-width: 400px) and (max-width: 800px)) {
@@ -593,6 +606,19 @@ body {
         font-weight: 500;
         cursor: pointer;
         background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+
+    .AdoptionButtons button{
+        margin-right: 10px;
+        cursor: pointer;
+        padding: 15px 30px;
+        border-radius: 30px;
+        width: auto;
+        border: none;
+        text-align: center;
+        background-color: #ffd100;
+        font-family: "Readex Pro", Sans-serif;
+        font-weight: bold;
     }
     
 } 
