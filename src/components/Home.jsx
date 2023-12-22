@@ -241,7 +241,7 @@ const Home = () => {
                 </span>
             <h1>Register</h1>
             <hr/>
-
+        <form onSubmit={register}>
             <label for="name"><b>Name</b></label>
             <input type="text" placeholder="Full Name" name="name" id="name" 
                 value = {name}
@@ -262,7 +262,8 @@ const Home = () => {
             <hr/>
         
             <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-            <button id="register" className="registerbtn" onClick={register}>Register</button>
+            <button id="register" type='submit' className="registerbtn">Register</button>
+            </form>
         </div>
         
         <div className="container1 signin1">
@@ -281,7 +282,7 @@ const Home = () => {
                     </span>
                 <h1>Sign In</h1>
             <hr/>
-
+                <form onSubmit={login}>
                 <label for="email"><b>Email</b></label>
                 <input type="email" placeholder="Enter Email" name="email" id="login-email" 
                     value={email} 
@@ -295,7 +296,8 @@ const Home = () => {
                 required/>
                 <hr/>
             
-                <button id = "sign" className="signinbtn" onClick={login}>Sign In</button>
+                <button type='submit' id = "sign" className="signinbtn">Sign In</button>
+                </form>
             </div>
             
             <div className="container2 signup">
